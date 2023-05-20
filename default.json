@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "config:base",
+    ":semanticCommits"
+  ],
+  "packageRules": [
+    {
+      "groupName": "3d-parties non major deps",
+      "groupSlug": "3d-parties-minor-patch-pin",
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin"
+      ],
+      "automerge": true,
+      "automergeType": "branch"
+    }
+  ]
+}
