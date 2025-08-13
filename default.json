@@ -5,6 +5,21 @@
   ],
   "packageRules": [
     {
+      "groupName": "go toolchain",
+      "matchManagers": ["gomod"],
+      "matchPackageNames": ["golang"],
+      "separateMinorPatch": true,
+      "separateMultipleMajor": true,
+      "automerge": false
+    },
+    {
+      "groupName": "go toolchain patches",
+      "matchManagers": ["gomod"],
+      "matchPackageNames": ["golang"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
       "groupName": "3d-parties non major deps",
       "groupSlug": "3d-parties-minor-patch-pin",
       "matchUpdateTypes": [
