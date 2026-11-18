@@ -5,6 +5,12 @@
   ],
   "packageRules": [
     {
+      "description": "Auto-merge every non-major dependency update once checks pass, for every manager (GitHub Actions, npm, Docker, digests), not only Go modules. Majors stay manual. Later rules in this list still opt specific updates out.",
+      "matchPackageNames": ["*"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
       "groupName": "go toolchain",
       "matchManagers": ["gomod"],
       "matchPackageNames": ["golang"],
