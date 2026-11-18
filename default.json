@@ -5,6 +5,10 @@
   ],
   "packageRules": [
     {
+      "description": "Auto-merge every dependency update once checks pass (fleet policy, same as github>sneat-co/cicd). Later rules in this list still opt specific updates out.",
+      "automerge": true
+    },
+    {
       "groupName": "go toolchain",
       "matchManagers": ["gomod"],
       "matchPackageNames": ["golang"],
